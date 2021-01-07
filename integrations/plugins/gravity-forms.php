@@ -46,13 +46,13 @@ function cmplz_gravifyforms_initform() {
 		?>
 		<script>
 			jQuery(document).ready(function ($) {
-				//store the container where gf recaptcha resides
+				/* store the container where gf recaptcha resides */
 				var reCaptchaContainer = $('.ginput_recaptcha').closest('.gfield');
 				reCaptchaContainer.append('<span class="cmplz-gf-recaptcha cmplz-accept-marketing"><?php _e("Click to accept reCaptcha validation.", 'complianz-gdpr')?></span>');
 
 				$(document).on("cmplzRunAfterAllScripts", cmplz_cf7_fire_post_render);
 				function cmplz_cf7_fire_post_render() {
-					//fire a DomContentLoaded event, so the Contact Form 7 reCaptcha integration will work
+					/* fire a DomContentLoaded event, so the Contact Form 7 reCaptcha integration will work */
 					window.document.dispatchEvent(new Event("gform_post_render", {
 						bubbles: true,
 						cancelable: true
